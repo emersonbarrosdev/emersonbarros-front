@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/theming';
+@import '/src/palette.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primary: mat-palette($blue-purple-palette);
+$accent: mat-palette($dark-purple-palette);
+$gold: mat-palette($gold-yellow-palette);
+$warn: mat-palette($mat-red);
+
+$theme-colors: (
+    primary: $primary,
+    accent: $accent,
+    gold: $gold,
+    warn: $warn,
+);
+
+$theme-typography: mat-typography-config($font-family: 'Poppins, sans-serif',
+    );
+
+$custom-theme: mat-light-theme((color: $theme-colors,
+            typography: $theme-typography,
+        ));
+
+@include angular-material-theme($custom-theme);
+
+// @use '@angular/material' as mat;
+
+
+// $my-dark-theme: mat.define-dark-theme((
+//   color: (
+//     primary: mat.define-palette($light-wine),
+//     accent: mat.define-palette($dark-wine),
+//   ),
+//   typography: mat.define-typography-config(
+//     $font-family: 'Poppins, sans-serif'
+//   )
+// ));
+
+// @include mat.core();
+// @include mat.all-component-themes($my-dark-theme);
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
