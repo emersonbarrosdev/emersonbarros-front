@@ -1,0 +1,35 @@
+@import '../../../../styles.scss';
+
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: mat-color($accent);
+}
+
+.mat-toolbar {
+  max-width: 80%;
+  background: none !important;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span {
+  color: #fff !important;
+}
+
+.mat-toolbar .mat-mdc-button-base.mat-mdc-button-base.mat-unthemed {
+  background-color: none !important;
+
+  a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+}
+
+.mat-mdc-button,
+.mat-mdc-outlined-button {
+  --mat-mdc-button-persistent-ripple-color: #fff !important;
+}
